@@ -1,13 +1,27 @@
-const Pool = require('pg');
+const MongoClient = require('mongodb').MongoClient
 
-const pool =  new Pool.Pool({
-    user:"nibodh",
-    password:"root",
-    host:"localhost",
-    port:"5432",
-    database:"sas",
-});
+class Connection {
+    static connectToMongo() {
+        if ( this.db ) return Promise.resolve(this.db)
+        return MongoClient.connect(this.url, this.options)
+            .then(db => this.db = db)
+    }
 
-pool.connect();
+    // or in the new async world
+    static async connectToMongo() {
+        if (this.db) return this.db
+        this.db = await MongoClient.connect(this.url, this.options)
+        return this.db
+    }
+}
 
-module.exports = pool;
+Connection.db = "expertrons"
+Connection.url = 'mongodb+srv://kunj:welcome123@kunj.aenbe.mongodb.net/expertrons?retryWrites=true&w=majority'
+Connection.options = {
+    bufferMaxEntries:   0,
+    reconnectTries:     5000,
+    useNewUrlParser:    true,
+    useUnifiedTopology: true,
+}
+
+module.exports = { Connection }
