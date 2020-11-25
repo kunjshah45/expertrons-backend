@@ -1,0 +1,54 @@
+// http://localhost:3000/charges/update
+{
+    "quantity":96,
+    "id":"0237cfa4-96d3-4318-b150-33129b431e9d"
+}
+
+// http://localhost:3000/charges/add
+{
+    "society_id":"40e6215d-b5c6-4896-987c-f30f3678f608",
+    "ledger_id":"40e6215d-b5c6-4896-987c-f30f3678f608",
+    "quantity":96,
+    "id":"0237cfa4-96d3-4318-b150-33129b431e9d"
+}
+
+// localhost:3000/ledger/fetch_ledger
+{
+    "id":"40e6215d-b5c6-4896-987c-f30f3678f608"
+}
+
+// localhost:3000/ledger/add_ledger
+{
+    "society_id":"7a175b33-bdf5-4937-b8a5-a6c9b52164da",
+    "ledger_name":"abcd",
+    "ledger_code":"qwertyu",
+    "accounting_group":"aa",
+    "opening_balance":50000,
+    "closing_balance":60000
+}
+
+//localhost:3000/ledger/update_ledger
+{
+    "id": "8e9633da-bbbf-40d4-bf7f-5ec515f3b45e",
+    "ledger_code": "asdfg"
+}
+
+// localhost:3000/members/add
+
+{
+    "society_id":"7a175b33-bdf5-4937-b8a5-a6c9b52164da",
+    "name": "{'KunjShah', 'asdf'}",
+    "contact_no": "{9029624133, 741741}",
+    "email": "{'kshah@gmail.com', 'kshah@gmail.com'}",
+    "number_of_shares":45
+}
+
+// localhost:3000/members/update
+{
+    "id":"a8345e56-2eec-4835-9f12-38c007eb35b1",
+    "society_id":"7a175b33-bdf5-4937-b8a5-a6c9b52164da",
+    "name": "{'KunjShah', 'Mithil Jain'}",
+    "contact_no": "{9029624133, 741741}",
+    "email": "{'kshah@gmail.com', 'kshah@gmail.com'}",
+    "number_of_shares":45
+}

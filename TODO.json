@@ -1,0 +1,188 @@
+Important things that we will have to take care about
+
+BACKEND
+login
+history of society committee members
+log every change in a table (before  exectuing update query, fetch current state and log it to a file, each society can have its known log file, it should also contain which user is updating meaning user_id)
+database functions
+import functions- taskkkkkkk
+
+
+FRONTEND
+Editable tabels, there will be fields which should'nt be allowed to edit
+download as excel, pdf
+import csv flow
+reversal
+
+
+things to check
+winston logger
+multiple database option feasible
+sql - no sql
+
+Funcitons:
+// individual ledger
+    View ledger input = {
+        "key": "value",
+        "society_id": "",
+    }
+output = {
+    "society_id": "",
+    "...": "...",
+    "data": [{
+            "dataAttrib1": "value",
+            "dataAttrib2": "value",
+        },
+        {
+            "dataAttrib1": "value",
+            "dataAttrib2": "value",
+        }
+    ]
+}
+
+// create individual ledger
+// fetch multiple ledger
+create ledger input = {
+    "society_id": "",
+    "data": {
+        "key1":"value1",
+        "key2":"value2",
+    },
+}
+output={
+    "status":"",
+    "message":"",
+    "error":"",
+    "data":{
+
+    }
+}
+
+// cashbook
+fetch cashbook input={
+    "society_id":"",
+    "ledger_id":"",
+    "nature":"",
+    "date_from":"",
+    "date_to":"",
+}
+output={
+    "status":"",
+    "message":"",
+    "error":"",
+    "data":{
+
+    }
+}
+
+// bankbook
+fetch bankbook input={
+    "society_id":"",
+    "ledger_id":"",
+    "nature":"",
+    "date_from":"",
+    "date_to":"",
+}
+output={
+    "status":"",
+    "message":"",
+    "error":"",
+    "data":{
+
+    }
+}
+
+
+// charges details
+
+// create/add/insert
+input={
+    "society_id":"",
+    "data":{
+        "key1":"value1",
+        "key2":"value2",
+        "key3":"value3",
+        "key4":"value4",
+    }
+}
+
+output={
+    "status":"",
+    "message":"",
+    "error":"",
+    "data":{
+    }
+}
+
+// fetch
+input={
+    "society_id":"",
+    "charge_id":""
+}
+
+output={
+    "status":"",
+    "message":"",
+    "error":"",
+    "data":[{},{},{}]
+}
+
+// update
+input={
+    "society_id":"",
+    "charge_id":"",
+    "data":{
+        "updateKey1":"value",
+        "updateKey2":"value"
+    }
+}
+
+output={
+    "status":"",
+    "message":"",
+    "error":"",
+}
+
+// VOUCHER
+
+//ADD VOUCHER
+input={
+    "society_id":"",
+    "voucher_no":"",
+    "voucher_type":"",
+    "data":[
+        {
+            "account_ledger_id":"",
+            "debit":"",
+            "credit":""
+
+        },
+        {
+
+        }
+    ]
+}
+
+output={
+
+}
+
+//UPDATE VOUCHER
+
+//FETCH VOUCHERS
+// two things
+// first fetch recent vouchers
+// fetch filtered vouchers
+
+
+
+
+
+Pending
+Edit ledger
+
+
+// make api working compelete
+// use helper functions in index route (body_helper_function, fetch_column_names)
+
+// send request from postman accept it and process it using this functions and do the expected operation(add, update, fetch) 

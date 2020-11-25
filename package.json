@@ -1,0 +1,33 @@
+{
+  "name": "sas-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "dev": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunjshah45/sas-backend.git"
+  },
+  "keywords": [
+    "society"
+  ],
+  "author": "Nibodh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kunjshah45/sas-backend/issues"
+  },
+  "homepage": "https://github.com/kunjshah45/sas-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "json-sql-builder2": "^1.0.24",
+    "nodemon": "^2.0.4",
+    "nunjucks": "^3.2.1",
+    "pg": "^8.3.0"
+  }
+}
